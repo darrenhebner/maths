@@ -69,17 +69,20 @@ export default function Maths() {
 
   return (
     <>
-      <div className="question">
-        <span className="left">{left}</span>
-        <span className="operator">{operators.get(operator)}</span>
-        <span className="right">{right}</span>
+      <span className="bubble">
+        {left}
+        {operators.get(operator)}
+        {right}
+      </span>
 
-        <form method="post">
-          <input type="number" name="proposed" step="0.01" />
-        </form>
+      <div className="skip">
+        <Link to="/">Skip</Link>
       </div>
 
-      <Link to="/">Skip</Link>
+      <form autoComplete="off" method="post">
+        <input inputMode="numeric" name="proposed" step="0.01" />
+        <button type="submit">Submit</button>
+      </form>
     </>
   );
 }
