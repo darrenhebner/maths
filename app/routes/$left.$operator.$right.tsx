@@ -80,7 +80,7 @@ export default function Maths() {
       </div>
 
       <form autoComplete="off" method="post">
-        <input inputMode="numeric" name="proposed" step="0.01" />
+        <input inputMode="decimal" name="proposed" step="0.01" />
         <button type="submit">Submit</button>
       </form>
     </>
